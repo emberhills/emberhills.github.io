@@ -11,6 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    @font-face {
+      font-family: "Minecraft";
+      src: url("/fonts/Minecraft.otf") format("opentype");
+    }
+
     body {
       margin: 0;
       overflow: hidden;
@@ -75,6 +80,7 @@
       top: 50%;
       transform: translateY(-50%);
       width: 280px;
+      z-index: 10;
     }
 
     .profile-card {
@@ -83,19 +89,30 @@
       padding: 14px;
       background: rgba(20, 25, 40, .67);
       backdrop-filter: blur(14px);
-      max-height: 90px;
+      max-height: 100px;
       transition: .35s;
+      position: relative;
+      z-index: 5;
     }
 
     .profile-card:hover {
       max-height: 220px;
-      transform: translateY(-4px);
     }
 
     .profile-main {
       display: flex;
       align-items: center;
       gap: 14px;
+    }
+
+    .cat {
+      position: absolute;
+      right: 0px;
+      top: -55px;
+      width: 60px;
+      height: auto;
+	  cursor: pointer;
+      z-index: 6;
     }
 
     /* avatar container adjusted to match decoration sizes */
@@ -195,7 +212,7 @@
         transform: translate(-50%, -50%) scale(.2) rotate(0deg);
       }
       34% {
-        left: 102%;
+        left: 120%;
         opacity: 1;
         transform: translate(-50%, -50%) scale(1.2) rotate(20deg);
       }
@@ -208,7 +225,7 @@
         transform: translate(-50%, -50%) scale(1.8) rotate(120deg);
       }
       100% {
-        left: 102%;
+        left: 120%;
         opacity: 0;
       }
     }
@@ -222,6 +239,7 @@
       margin-top: 0px;
       padding-top: 0px;
 	  margin-left: 4px;
+	  margin-top: 8px;
       border-top: none;
       color: rgba(255, 255, 255, .75);
       font-size: 11px;
@@ -306,7 +324,7 @@
       gap: 8px;
       justify-content: center;
       flex: 1 1 auto;
-      max-width: 80px;
+      max-width: auto;
       min-width: 32px;
       height: 28px;
       padding: 6px 8px;
@@ -342,6 +360,14 @@
       line-height: 1;
       font-size: 13px;
     }
+
+    .action-btn img.zzz-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      display: block;
+      object-fit: contain;
+    }
 	
   /* wp by */
   .site-wp-by {
@@ -372,7 +398,7 @@
       .action-btn { max-width: 30%; }
     }
   </style>
-  <script type="module" crossorigin src="/assets/index-DNwC1ZcO.js"></script>
+  <script type="module" crossorigin src="/assets/index-XBHX7ZWX.js"></script>
 </head>
 
 <body>
@@ -407,23 +433,11 @@
           </div>
         </div>
         Indie developer.<br />
-        Anddd couldn't think of anything to write here. (Again)
+        Anddd couldn't think of anything to write here.
       </div>
 
       <!-- buttons -->
 <div class="actions" aria-hidden="false">
-  <a
-    class="action-btn"
-    href="https://pinterest.com/windyhillss"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Pinterest"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
-      <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
-    </svg>
-  </a>
-
   <a
     class="action-btn"
     href="https://discord.com/users/607103362558722060"
@@ -438,19 +452,19 @@
 
   <a
     class="action-btn"
-    href="https://open.spotify.com/user/998e57udafdypo007aiz71q37?si=56f7448ea93047c5"
+    href="https://enka.network/zzz/1507085742/"
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Spotify"
+    aria-label="ZZZ"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
-      <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
-    </svg>
+    <img class="zzz-icon" src="/zzz.webp" alt="ZZZ" />
   </a>
 </div>
     </div>
+	  <!-- buttons end -->
+    <img class="cat" src="/assets/cat-BeJUcRsj.png"/>
   </div>
-  
+
   <div class="site-wp-by">
     <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1895828809" target="_blank" rel="noopener noreferrer">
       WP from Icytux
